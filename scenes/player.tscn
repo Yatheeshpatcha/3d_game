@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://10mssr510n43"]
+
+[ext_resource type="Script" uid="uid://dxxehyrk4024n" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rebgc"]
+radius = 0.5239258
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_onrkg"]
+points = PackedVector3Array(-0.118647, -0.5341068, -0.50456846, 0.08941461, 0.5673622, 0.50769585, -0.08960108, 0.5673387, 0.5076748, 0.060186744, -0.87626094, 0.33227557, 0.47279114, 0.56144977, -0.20687279, -0.5077008, 0.567273, -0.089545436, -0.47715843, -0.6263197, 0.14900377, 0.50768733, -0.56735945, 0.08947751, -0.06046751, 0.87609965, -0.33239537, 0.2386057, -0.8056214, -0.3283557, 0.35687488, 0.77349746, 0.23784734, -0.35692137, -0.77340144, -0.23789975, -0.32930362, 0.7783199, 0.26932073, 0.08939063, 0.5672101, -0.5077407, 0.089414634, -0.56736237, 0.507696, -0.32341474, 0.47042796, -0.41165736, 0.35179996, -0.52787006, -0.381254, -0.3235046, -0.4705587, 0.41159078, 0.4100929, 0.49814862, 0.32229802, 0.12179783, 0.9755603, 0.09132651, -0.44245502, 0.56028765, 0.2653624, -0.4424218, -0.5602456, -0.26542526, -0.121886276, -0.9755416, 0.091324754, 0.3518466, -0.52794003, 0.3812212, 0.33228132, -0.8762455, 0.060247228, -0.30214548, 0.8760692, -0.15100493, 0.2702403, 0.87138295, -0.21030056, 0.50768745, 0.56735957, 0.08947753, 0.5045456, -0.53409433, -0.118742585, -0.060467556, -0.8761003, -0.3323956, -0.23794696, -0.77345747, 0.35684732, 0.08939061, -0.56721, -0.5077406)
+
+[node name="player" type="RigidBody3D" unique_id=448593826]
+lock_rotation = true
+script = ExtResource("1_4flbx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1233670510]
+mesh = SubResource("CapsuleMesh_rebgc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1776006460]
+shape = SubResource("ConvexPolygonShape3D_onrkg")
+
+[node name="TwistPivot" type="Node3D" parent="." unique_id=1803856849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03512144, 0, -0.03597808)
+
+[node name="PitchPivot" type="Node3D" parent="TwistPivot" unique_id=806148245]
+
+[node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot" unique_id=563206519]
+transform = Transform3D(1, 0, 0, 0, 0.8619038, 0.5070719, 0, -0.5070719, 0.8619038, 0, 2.68229, 2.247469)
+fov = 90.0
