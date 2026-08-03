@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://djej0o23iahkn"]
+
+[ext_resource type="Script" uid="uid://cw3xuuh4iwp43" path="res://start.gd" id="1_u80x2"]
+[ext_resource type="Texture2D" uid="uid://dgykxc0lj1eaf" path="res://assets/flat-cartoon-pixel-art-landscape-260nw-2695955125.webp" id="2_bodal"]
+
+[node name="start" type="Node2D" unique_id=1469917147]
+script = ExtResource("1_u80x2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=465957630]
+offset_left = -456.0
+offset_top = -314.0
+offset_right = 2568.0
+offset_bottom = 1550.0
+texture = ExtResource("2_bodal")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1351542098]
+offset_left = 252.0
+offset_top = -114.0
+offset_right = 1601.0
+offset_bottom = 475.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 9
+theme_override_constants/shadow_outline_size = 80
+theme_override_constants/outline_size = 100
+theme_override_font_sizes/normal_font_size = 300
+text = "JUMP!"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start" type="Button" parent="." unique_id=1226565519]
+offset_left = 695.0
+offset_top = 401.0
+offset_right = 1075.0
+offset_bottom = 561.0
+theme_override_font_sizes/font_size = 100
+text = "start"
+
+[node name="quit" type="Button" parent="." unique_id=472917513]
+offset_left = 705.0
+offset_top = 645.0
+offset_right = 1085.0
+offset_bottom = 805.0
+theme_override_font_sizes/font_size = 100
+text = "quit"
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
