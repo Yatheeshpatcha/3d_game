@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt4fgvpb8vxt7"]
 
-[ext_resource type="Script" uid="uid://c3jrm8t6fe0fc" path="res://goal.gd" id="1_sx1j4"]
+[ext_resource type="Script" uid="uid://c3jrm8t6fe0fc" path="res://scenes/goal.gd" id="1_sx1j4"]
 [ext_resource type="ArrayMesh" uid="uid://bp4hfmvbfltjj" path="res://assets/Models/OBJ format/star.obj" id="2_w3gav"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rebgc"]

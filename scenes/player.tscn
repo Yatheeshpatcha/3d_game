@@ -1,22 +1,21 @@
 [gd_scene format=3 uid="uid://bgre14stfq8j2"]
 
-[ext_resource type="Script" uid="uid://pwjqsq82qpxj" path="res://node_3d.gd" id="1_4flbx"]
-[ext_resource type="ArrayMesh" uid="uid://c3oj8oa6bwjec" path="res://assets/Models/OBJ format/character-ooli.obj" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://cqvrfmh2lfugq" path="res://player.gd" id="1_g2els"]
+[ext_resource type="ArrayMesh" uid="uid://c3oj8oa6bwjec" path="res://assets/Models/OBJ format/character-ooli.obj" id="2_qhqgy"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i3pqv"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dqkch"]
 points = PackedVector3Array(0.17648424, 0.83711576, -0.018323436, -0.41451618, 0.24726768, -0.018488895, -0.41383797, 0.24760117, 0.050166667, 0.42696297, 0.23258382, 0.022791404, 0.13510145, 0.28967223, 0.30982643, -0.22119872, 0.7968617, 0.21487786, -0.055766124, 0.6030134, -0.2761187, 0.11331339, 0.021672428, -0.03445142, 0.29940802, 0.6862473, 0.2415634, -0.21903732, 0.7391539, -0.11325207, -0.123727284, 0.29085007, 0.30781084, -0.110443756, 0.017811015, 0.13156697, 0.16068502, 0.5346654, -0.24770516, -0.05534723, 0.38627282, -0.24709298, 0.14957349, 0.013871785, 0.11890158, 0.32313907, 0.6700565, -0.017898027, -0.001583162, 0.8978299, 0.14771634, -0.3006461, 0.61679274, 0.253858, -0.10272293, 0.021672428, -0.03445142, -0.001498901, 0.8237689, -0.14177658, -0.3157252, 0.6858281, 0.0635981, 0.40202188, 0.25206897, -0.058067713, 0.17511389, 0.6574084, -0.22189121, 0.2445795, 0.37172893, 0.29612976, 0.10506364, 0.40061238, -0.24349791, 0.14828734, 0.8487304, 0.21333385, -0.19160673, 0.57588166, -0.22177364, -0.12580009, 0.8675382, 0.022720536, -0.3966844, 0.27663365, -0.059046656, -0.21542552, 0.3467543, 0.29004976, 0.42236325, 0.27602965, 0.07733702, 0.32726607, 0.7002508, 0.11859122)
 
-[node name="Player" type="CharacterBody3D" unique_id=2079937697]
-script = ExtResource("1_4flbx")
+[node name="player" type="CharacterBody3D" unique_id=1339646720]
+script = ExtResource("1_g2els")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2091947042]
-mesh = ExtResource("2_onrkg")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1031670608]
+mesh = ExtResource("2_qhqgy")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=924634253]
-shape = SubResource("ConvexPolygonShape3D_i3pqv")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=767987794]
+shape = SubResource("ConvexPolygonShape3D_dqkch")
 
-[node name="TwistPivot" type="Node3D" parent="." unique_id=1956483711]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03512144, 0, -0.03597808)
+[node name="Node3D" type="Node3D" parent="." unique_id=2005797949]
 
-[node name="Camera3D" type="Camera3D" parent="TwistPivot" unique_id=92989805]
-transform = Transform3D(-0.9966611, 0, -0.081649534, 0, 1, 0, 0.081649534, 0, -0.9966611, 0, 0.6946826, 0.2768154)
+[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1516942542]
+transform = Transform3D(-0.9881403, 0, -0.15355407, 0, 1, 0, 0.15355407, 0, -0.9881403, 0, 0.67811954, 0.21774292)

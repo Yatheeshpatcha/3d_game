@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ekl5rjh1y6pa" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bgre14stfq8j2" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dt4fgvpb8vxt7" path="res://scenes/goal.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cnw2nkqlv8akf" path="res://scenes/kill_floor.tscn" id="5_tbgi4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -76,8 +77,11 @@ mesh = ExtResource("1_0wfyh")
 transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0.016830921, 0, 0.008842468)
 shape = SubResource("ConcavePolygonShape3D_sugp2")
 
-[node name="Player" parent="." unique_id=2079937697 instance=ExtResource("1_o5qli")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7159529, 1.5582213, -0.41766667)
+[node name="kill floor" parent="." unique_id=1578166057 instance=ExtResource("5_tbgi4")]
+transform = Transform3D(50.257465, 0, 0, 0, 18.772837, 0, 0, 0, 82.59856, 4.125643, -5.7504044, 15.874093)
+
+[node name="player" parent="." unique_id=1339646720 instance=ExtResource("1_o5qli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9984741, 1.5582199, -2.6945038)
 
 [node name="goal" parent="." unique_id=1048783637 instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4880066, 3.5298295, 27.042028)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1276951, 3.529827, 27.082844)

@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://ctmw1wmf08i1u"]
+
+[ext_resource type="ArrayMesh" uid="uid://cojdirjnkcoot" path="res://assets/Models/OBJ format/brick.obj" id="1_h23n6"]
+[ext_resource type="PackedScene" uid="uid://bgre14stfq8j2" path="res://scenes/player.tscn" id="2_uwxec"]
+[ext_resource type="PackedScene" uid="uid://d1yaavs3h1o04" path="res://scenes/level_3_goal.tscn" id="3_uwxec"]
+[ext_resource type="PackedScene" uid="uid://cnw2nkqlv8akf" path="res://scenes/kill_floor.tscn" id="4_1pn4d"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1pn4d"]
+points = PackedVector3Array(-0.23077887, 0.011557595, -0.23077872, 0.2489076, 0.4755232, 0.22556919, 0.22555126, 0.49889457, 0.22555417, -0.22556864, 0.0244785, 0.24890985, -0.22556905, 0.49886206, -0.22556888, 0.24890794, 0.02447745, -0.2255695, 0.22556622, 0.47552314, -0.2489106, 0.22556728, 0.0011374776, 0.22557019, -0.2489096, 0.47552222, 0.22556819, 0.22556622, 0.47552314, 0.2489106, -0.22556864, 0.0244785, -0.24890985, -0.24890994, 0.024478449, -0.2255685, 0.22556728, 0.0011374776, -0.22557019, -0.22556938, 0.0011385796, 0.22556919, 0.22555126, 0.49889457, -0.22555417, -0.22556905, 0.49886206, 0.22556888, 0.2489076, 0.4755232, -0.22556919, -0.22556832, 0.47552216, -0.2489095, -0.22556832, 0.47552216, 0.2489095, 0.24890794, 0.02447745, 0.2255695, 0.22556654, 0.0244775, 0.24891095, 0.22556654, 0.0244775, -0.24891095, -0.24890994, 0.024478449, 0.2255685, -0.2489096, 0.47552222, -0.22556819, -0.22556938, 0.0011385796, -0.22556919)
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_h23n6"]
+
+[node name="level 3" type="Node3D" unique_id=375486504]
+transform = Transform3D(1, 0, 0, 0, 0.9999733, 0.0073049054, 0, -0.0073049054, 0.9999733, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=724177361]
+transform = Transform3D(12.627612, 0, 0, 0, 2.767696, -7.450581e-09, 0, 3.7252903e-09, 9.520065, 0, -0.093403734, -0.00068232365)
+mesh = ExtResource("1_h23n6")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="MeshInstance3D" unique_id=27745197]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D2" unique_id=1618471635]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 7.450581e-09, 0, -5.820766e-11, 1, 0, 0.022176258, 1.4756767e-05)
+shape = SubResource("ConvexPolygonShape3D_1pn4d")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=990982048]
+transform = Transform3D(22.550707, 0, 0, 0, 2.349252, -2.9802322e-08, 0, 2.0489097e-08, 11.2225485, -12.715236, 0.4603576, 7.584117)
+mesh = ExtResource("1_h23n6")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="MeshInstance3D2" unique_id=1895932287]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D2" unique_id=1393097692]
+transform = Transform3D(1, 0, 0, 0, 0.9263136, 0, 0, 0, 0.99946165, 0, 0.022176236, 1.4781952e-05)
+shape = SubResource("ConvexPolygonShape3D_1pn4d")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2013208074]
+transform = Transform3D(-9.837977, 0, 0, 0, 4.5689373, -5.9604645e-08, 0, 2.5331974e-07, 12.309837, -22.96711, -4.2800627, 22.066494)
+mesh = ExtResource("1_h23n6")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="MeshInstance3D3" unique_id=1238264266]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D2" unique_id=1211123914]
+transform = Transform3D(1, 0, 0, 0, 0.9263136, 0, 0, 0, 0.99946165, 0, 0.022176236, 1.4781952e-05)
+shape = SubResource("ConvexPolygonShape3D_1pn4d")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=2016948546]
+transform = Transform3D(20.830868, 0, 0, 0, 14.101685, -1.4901161e-07, 0, 2.8535724e-06, 23.87489, -9.535057, -17.09493, 32.934166)
+mesh = ExtResource("1_h23n6")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="MeshInstance3D4" unique_id=1365077733]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D2" unique_id=1945997419]
+transform = Transform3D(1, 0, 0, 0, 0.9263136, 0, 0, 0, 0.99946165, 0, 0.022176236, 1.4781952e-05)
+shape = SubResource("ConvexPolygonShape3D_1pn4d")
+
+[node name="player" parent="." unique_id=1339646720 instance=ExtResource("2_uwxec")]
+transform = Transform3D(1, 0, 0, 0, 0.99997354, -0.0073049073, 0, 0.0073049073, 0.99997354, 0.18803546, 1.4102575, -0.43975082)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2094285176]
+transform = Transform3D(1, 0, 0, 0, 0.4788326, 0.8779064, 0, -0.8779064, 0.4788326, 0.038594723, 3.0785406, 0.022489049)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1083626618]
+camera_attributes = SubResource("CameraAttributesPhysical_h23n6")
+
+[node name="level_3_goal" parent="." unique_id=1610141959 instance=ExtResource("3_uwxec")]
+transform = Transform3D(6.155377, 0, 0, 0, 7.0186815, 0.0051112613, 0, 0.051272202, -0.6996836, -8.446417, -9.3604355, 29.895615)
+
+[node name="kill floor" parent="." unique_id=1578166057 instance=ExtResource("4_1pn4d")]
+transform = Transform3D(100.693306, 0, 0, 0, 100.69066, -0.7355554, 0, 0.7355554, 100.69066, 1.7397861, -54.461075, 12.807419)

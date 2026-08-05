@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cnw2nkqlv8akf"]
+
+[ext_resource type="Script" uid="uid://dsjt8t0yykkrw" path="res://scenes/kill_floor.gd" id="1_2g1od"]
+[ext_resource type="ArrayMesh" uid="uid://dtjs5clufp8a" path="res://assets/Models/OBJ format/trap-spikes.obj" id="2_prnm8"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6vpbk"]
+points = PackedVector3Array(0.31278747, 0.019031493, 0.31450114, 0.3113708, 2.7755576e-17, 0.31308442, -0.3145011, 0.01903157, 0.30467626, -0.06169367, -0.0050738156, -0.32387382, 0.20615016, 0.255, 0.20779976, 0.30351743, 0.08627263, -0.30346733, -0.20459148, 0.25301164, 0.20458889, -0.31308466, -2.7755576e-17, -0.31138444, 0.20441416, 0.25392526, -0.20436426, 0.3113708, 0, -0.30160415, -0.3052313, 0.08627263, 0.3052309, -0.31308466, 5.551115e-17, 0.30330414, -0.3027815, 0.07817319, -0.30114207, 0.30351743, 0.08627263, 0.3052309, -0.20780228, 0.255, -0.20609978, 0.059979796, -0.0050738156, 0.3255738, -0.16315179, 0.24861467, -0.22234994, 0.22233821, 0.24861467, 0.16314831, -0.31533897, 0.07614885, -0.0701595, -0.07186491, 0.07614885, -0.31370234, 0.3238599, 0.025375001, 0.061624452, 0.31368867, 0.07614885, 0.07185949, -0.32557377, 0.025375001, -0.05992447, 0.07015104, 0.065973416, 0.31540233, -0.3139476, 0.02900805, -0.31224737, -0.06169367, 0.025375001, -0.32387382, 0.059979796, 0.015225396, 0.3255738, 0.31271815, 0.019055314, -0.30290937)
+
+[node name="kill floor" type="Area3D" unique_id=1578166057]
+script = ExtResource("1_2g1od")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1610292737]
+mesh = ExtResource("2_prnm8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=418226586]
+shape = SubResource("ConvexPolygonShape3D_6vpbk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
