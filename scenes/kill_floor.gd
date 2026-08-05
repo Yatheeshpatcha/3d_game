@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: CharacterBody3D) -> void:
-	get_tree().change_scene_to_file("res://scenes/lose.tscn")
+	get_tree().change_scene_to_file("res://scenes/start.tscn")

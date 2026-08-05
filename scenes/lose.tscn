@@ -1,3 +1,45 @@
 [gd_scene format=3 uid="uid://jg3guwfmn22w"]
 
+[ext_resource type="Script" uid="uid://bdo4fc8wkes4x" path="res://scenes/lose.gd" id="1_r6nsb"]
+[ext_resource type="Texture2D" uid="uid://dgykxc0lj1eaf" path="res://assets/flat-cartoon-pixel-art-landscape-260nw-2695955125.webp" id="2_10rtl"]
+
 [node name="lose" type="Node2D" unique_id=585118093]
+script = ExtResource("1_r6nsb")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1546239224]
+offset_left = -88.0
+offset_top = -54.0
+offset_right = 2138.0
+offset_bottom = 1187.0
+texture = ExtResource("2_10rtl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect" unique_id=336294489]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 39.0
+offset_right = 1801.0
+offset_bottom = 632.0
+theme_override_constants/outline_size = 100
+theme_override_font_sizes/normal_font_size = 200
+text = "YOU LOSE"
+
+[node name="try_again" type="Button" parent="TextureRect" unique_id=208807053]
+layout_mode = 0
+offset_left = 671.0
+offset_top = 435.0
+offset_right = 1260.0
+offset_bottom = 603.0
+theme_override_font_sizes/font_size = 100
+text = "PLAY AGAIN"
+
+[node name="sont" type="Button" parent="TextureRect" unique_id=667270177]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 697.0
+offset_right = 1267.0
+offset_bottom = 865.0
+theme_override_font_sizes/font_size = 100
+text = "QUIT"
+
+[connection signal="pressed" from="TextureRect/try_again" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="TextureRect/sont" to="." method="_on_sont_pressed"]

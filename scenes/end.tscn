@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bhxyp48x8y5r6"]
 
+[ext_resource type="Script" uid="uid://77u423yspuxx" path="res://scenes/end.gd" id="1_3d26k"]
 [ext_resource type="Texture2D" uid="uid://dgykxc0lj1eaf" path="res://assets/flat-cartoon-pixel-art-landscape-260nw-2695955125.webp" id="1_mwn6m"]
 
 [node name="end" type="Node2D" unique_id=625947481]
+script = ExtResource("1_3d26k")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1601259003]
 offset_left = -88.0
@@ -12,5 +14,29 @@ offset_bottom = 1187.0
 texture = ExtResource("1_mwn6m")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1035384619]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 445.0
+offset_top = 39.0
+offset_right = 1801.0
+offset_bottom = 632.0
+theme_override_constants/outline_size = 100
+theme_override_font_sizes/normal_font_size = 200
+text = "YOU WIN"
+
+[node name="Button2" type="Button" parent="." unique_id=1926324330]
+offset_left = 550.0
+offset_top = 367.0
+offset_right = 1139.0
+offset_bottom = 535.0
+theme_override_font_sizes/font_size = 100
+text = "PLAY AGAIN"
+
+[node name="Button3" type="Button" parent="." unique_id=1871835170]
+offset_left = 544.0
+offset_top = 598.0
+offset_right = 1133.0
+offset_bottom = 766.0
+theme_override_font_sizes/font_size = 100
+text = "QUIT"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
